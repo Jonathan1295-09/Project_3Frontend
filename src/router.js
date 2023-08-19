@@ -20,7 +20,7 @@ const router = createBrowserRouter (createRoutesFromElements(
             <Route path="signup" element={<Signup/>} action={signupAction}/>
             <Route path="login" element={<Login/>} action={loginAction} />
         </Route> */}
-        <Route path="" element={<Index/>} loader={almbumsLoader}/>
+        <Route path="" element={<Index/>} loader={albumsLoader}/>
         <Route path=":id" element={<Show/>} loader={albumLoader}/>
         <Route path="dashboard" element={<Index/>} loader={albumsLoader}/>
         <Route path="create" action={createAction}/>
