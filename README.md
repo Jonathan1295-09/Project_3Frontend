@@ -3,7 +3,7 @@
 - **Project Name:** Personal JukeBox
 - **Project By:** Jonathan Casasola, Michael Delvecchio, Adrian Garcia 
 - [**LINK TO BACKEND**](https://github.com/Jonathan1295-09/Project_3Backend)
-- [**LINK TO DEPLOYED WEBSITE**]
+- [**LINK TO DEPLOYED WEBSITE**](https://personal-jukebox-nxb4.onrender.com/)
 - **List of technologies used** React, React-Router-Dom, sass
 - [**link to Trello**](https://trello.com/b/pHLyMGtB/project-3)
 
