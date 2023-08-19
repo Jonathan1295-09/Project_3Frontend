@@ -7,7 +7,8 @@ function Show(props) {
         <div className="album">
             <h1>{album.albumName}</h1>
             <h2>{album.artist}</h2>
-            <img src={album.image} alt={album.albumName} />
+            <h3>Year released:{album.yearReleased}</h3>
+            <a href={album.linkToAlbum}><img src={album.image} alt={album.albumName} /></a>
 
             <h2>Update {album.name}</h2>
             <Form action={`/update/${album._id}`} method="post" className="updateForm">
