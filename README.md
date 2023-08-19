@@ -7,7 +7,7 @@
 - **List of technologies used** React, React-Router-Dom, sass
 - [**link to Trello**](https://trello.com/b/pHLyMGtB/project-3)
 
-## Description 
+## Description
 This is the frontend repo for Personal JukeBox. As a user you will be able to add your own album with additional information attached such as artist name, year release and so on. 
 
 ## MockUp of UI
