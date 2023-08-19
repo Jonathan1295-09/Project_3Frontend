@@ -30,12 +30,12 @@ function Index(props) {
     return (
         <div className="albumContainer">
             <h2 className="index">Create A New Album</h2>
-            <Form action="/create" method="post" onSubmit={handleSubmit} className="createform">
-                <input type="text" name="AlbumName" value={formData.albumName} onChange={handleChange} placeholder="AlbumName"/>
+            <Form action="/create" method="post" onSubmit={handleSubmit} className="createForm">
+                <input type="text" name="albumName" value={formData.albumName} onChange={handleChange} placeholder="Album Name"/>
                 <input type="text" name="artist" value={formData.artist} onChange={handleChange} placeholder="Artist"/>
                 <input type="text" name="image" value={formData.image} onChange={handleChange} placeholder="Image"/>
-                <input type="text" name="yearReleased" value={formData.yearReleased} onChange={handleChange} placeholder="YearReleaed"/>
-                <input type="text" name="linkToAlbum" value={formData.linkToAlbum} onChange={handleChange} placeholder="LinkToAlbum"/>
+                <input type="number" name="yearReleased" value={formData.yearReleased} onChange={handleChange} placeholder="Year Released"/>
+                <input type="text" name="linkToAlbum" value={formData.linkToAlbum} onChange={handleChange} placeholder="Link To Album"/>
                 <input type="submit" value="Create Album"/>
             </Form>
 
