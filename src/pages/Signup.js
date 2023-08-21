@@ -3,7 +3,7 @@ import { Form } from 'react-router-dom';
 function Signup(props) {
 	return (
 		<div>
-			<h3>Signup Form</h3>
+			<h1>Signup Form</h1>
 			<Form action='/signup' method='post'>
 				<label htmlFor='username'>Username:</label>
 				<input type='text' name='username' id='username' />
