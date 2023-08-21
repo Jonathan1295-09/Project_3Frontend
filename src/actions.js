@@ -18,6 +18,7 @@ export const createAction = async ({request}) => {
     await fetch(`${baseUrl}/albums`, {
         // telling fetch to make a post request
         method: 'post',
+        credentials: 'include',
         headers: {
             // tells the backend the data is json
             "Content-Type" : "application/json"
@@ -27,7 +28,7 @@ export const createAction = async ({request}) => {
     })
 
     // redirect the user to the frontend index
-    return redirect('/')
+    return redirect('/dashboard')
 }
 
 export const updateAction = async ({request, params}) => {
@@ -47,6 +48,7 @@ export const updateAction = async ({request, params}) => {
     await fetch(`${baseUrl}/albums/${id}`, {
         // telling fetch to make a put request
         method: 'put',
+        credentials: 'include',
         headers: {
             "Content-Type": "application/json"
         },
@@ -64,9 +66,53 @@ export const deleteAction = async ({params}) => {
     // send a delete request to the backend
     await fetch(`${baseUrl}/albums/${id}`, {
         // telling fetch to make a delete request
-        method: 'delete'
+        method: 'delete',
+        credentials: 'include'
     })
 
     // redirect the user back to the frontend index
-    return redirect('/')
+    return redirect('/dashboard')
 }
+
+export const signupAction = async ({ request }) => {
+	const formData = await request.formData();
+	const newUser = {
+		username: formData.get('username'),
+		password: formData.get('password'),
+	};
+	const response = await fetch(`${baseUrl}/signup`, {
+		method: 'post',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify(newUser),
+	});
+	if (response.status >= 400) {
+		alert(response.statusText);
+		return redirect('/signup');
+	}
+	return redirect('/login');
+};
+
+export const loginAction = async ({ request }) => {
+	const formData = await request.formData();
+	const user = {
+		username: formData.get('username'),
+		password: formData.get('password'),
+	};
+	const response = await fetch(`${baseUrl}/login`, {
+		method: 'post',
+		credentials: 'include',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify(user),
+	});
+	if (response.status >= 400) {
+		alert(response.statusText);
+		return redirect('/login');
+	}
+	localStorage.setItem('loggedIn', JSON.stringify({ status: true }));
+
+	return redirect('/dashboard');
+};
