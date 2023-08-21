@@ -75,31 +75,41 @@ export const deleteAction = async ({params}) => {
 }
 
 export const signupAction = async ({ request }) => {
+    // grabbing form data
 	const formData = await request.formData();
+    // building out new user
 	const newUser = {
 		username: formData.get('username'),
 		password: formData.get('password'),
 	};
+    // send new user to the backend
 	const response = await fetch(`${baseUrl}/signup`, {
 		method: 'post',
 		headers: {
 			'Content-Type': 'application/json',
 		},
+        // send the json string of the new user
 		body: JSON.stringify(newUser),
 	});
+    // check if status if 400 or more
 	if (response.status >= 400) {
+        // alert the details of the error
 		alert(response.statusText);
+        // redirect back to the frontend signup
 		return redirect('/signup');
 	}
 	return redirect('/login');
 };
 
 export const loginAction = async ({ request }) => {
+    // grab the form data
 	const formData = await request.formData();
+    // build out the user
 	const user = {
 		username: formData.get('username'),
 		password: formData.get('password'),
 	};
+    // send the user to our backend
 	const response = await fetch(`${baseUrl}/login`, {
 		method: 'post',
 		credentials: 'include',
@@ -108,11 +118,14 @@ export const loginAction = async ({ request }) => {
 		},
 		body: JSON.stringify(user),
 	});
+    // check if status is 400 or more
 	if (response.status >= 400) {
 		alert(response.statusText);
 		return redirect('/login');
 	}
+    // store whether loggedIn in localStorage
 	localStorage.setItem('loggedIn', JSON.stringify({ status: true }));
 
+    // redirect back to the frontend index
 	return redirect('/dashboard');
 };

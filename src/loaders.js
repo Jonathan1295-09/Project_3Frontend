@@ -15,10 +15,13 @@ export const albumsLoader = async () => {
         return redirect('/login')
     }
 
+    // make a call to backend index
     const response = await fetch(`${baseUrl}/albums`, {
         credentials:"include"
     })
+    // convert the response into a js object
     const albums = await response.json()
+    // return the albums
     return albums
 }
 
