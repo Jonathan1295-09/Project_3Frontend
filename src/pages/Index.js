@@ -1,8 +1,10 @@
-import {Link, Form, useLoaderData} from "react-router-dom"
+import {Link, Form, useLoaderData, useNavigate} from "react-router-dom"
 import {useState} from "react"
+import {baseUrl} from "../base_url"
 
 function Index(props) {
     const albums = useLoaderData()
+    const navigate = useNavigate()
     const [formData, setFormData] = useState({
         albumName: "",
         artist: "",
@@ -29,6 +31,11 @@ function Index(props) {
 
     return (
         <div className="albumContainer">
+            <button onClick={async () => {
+                await fetch(`${baseUrl}/logout`)
+                localStorage.removeItem("loggedIn")
+                navigate("/")
+            }}>Logout</button>
             <h2 className="index">Create A New Album</h2>
             <Form action="/create" method="post" onSubmit={handleSubmit} className="createForm">
                 <input type="text" name="albumName" value={formData.albumName} onChange={handleChange} placeholder="Album Name"/>
