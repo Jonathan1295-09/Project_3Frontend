@@ -1,3 +1,53 @@
+body {
+    background-color: #104F55;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+    background-color: #32746D;
+}
+
+.nav h1 {
+    color: beige;
+    font-size: 2em;
+}
+
+.nav a {
+    text-decoration: none;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+    color: beige;
+}
+
 .albumContainer{
     text-align: center;
 }
+
+.album {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 20px;
+    width: 50%;
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    flex-wrap: wrap;
+}
+
+.albumInfo {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: beige;
+}
+
