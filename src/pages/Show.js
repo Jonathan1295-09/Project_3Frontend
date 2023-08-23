@@ -12,7 +12,6 @@ function Show(props) {
                 <h3>Year released: {album.yearReleased}</h3>
                 <a href={album.linkToAlbum} target="_blank" rel="noopener noreferrer"><img src={album.image} alt={album.albumName} /></a>
             </div>
-        
 
             <div className="albumControls">
                 <h2>Update {album.name}</h2>
@@ -22,7 +21,7 @@ function Show(props) {
                     <input type="text" name="image" placeholder="Image" defaultValue={album.image}  />
                     <input type="number" name="yearReleased" placeholder="Year Released" defaultValue={album.yearReleased}  />
                     <input type="text" name="linkToAlbum" placeholder="Link To Album" defaultValue={album.linkToAlbum}  />
-                    <input type="submit" defaultValue="Create Album"/>
+                    <input type="submit" value="Update Album"/>
                 </Form>
             </div>
 
