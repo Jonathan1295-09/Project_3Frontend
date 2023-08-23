@@ -3,9 +3,9 @@ import {useState} from "react"
 import {baseUrl} from "../base_url"
 
 function Index(props) {
+   
     // const albums = []
     const albums = useLoaderData()    
-
     const navigate = useNavigate()
     const [formData, setFormData] = useState({
         albumName: "",
