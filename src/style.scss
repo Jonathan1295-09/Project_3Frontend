@@ -1,3 +1,46 @@
+//INDEX//
 .albumContainer{
     text-align: center;
+}
+
+.logout{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    
+}
+
+.index{
+    text-align: center;
+    font-size: 80px;
+    text-shadow: #FC0 10px 0 2px;
+}
+
+.albums{
+    text-align: center;
+    font-size: 20px;
+}
+
+.artist{
+    text-align: center;
+    font-size: 20px;
+}
+
+.image{
+    text-align: center;
+    font-size: 20px;
+}
+
+.number{
+    text-align: center;
+    font-size: 20px;
+}
+
+.link{
+    text-align: center;
+    font-size: 20px;
+}
+
+.create{
+    font-size: 20px;
 }
