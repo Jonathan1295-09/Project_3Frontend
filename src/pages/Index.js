@@ -3,8 +3,9 @@ import {useState} from "react"
 import {baseUrl} from "../base_url"
 
 function Index(props) {
-    const albums = useLoaderData()
+   
     // const albums = []
+    const albums = useLoaderData()    
     const navigate = useNavigate()
     const [formData, setFormData] = useState({
         albumName: "",
@@ -32,19 +33,19 @@ function Index(props) {
 
     return (
         <div className="albumContainer">
-            <button onClick={async () => {
+            <div className="logout"><button onClick={async () => {
                 await fetch(`${baseUrl}/logout`)
                 localStorage.removeItem("loggedIn")
                 navigate("/")
-            }}>Logout</button>
+            }}>Logout</button></div>
             <h2 className="index">Create A New Album</h2>
             <Form action="/create" method="post" onSubmit={handleSubmit} className="createForm">
-                <input type="text" name="albumName" value={formData.albumName} onChange={handleChange} placeholder="Album Name"/>
-                <input type="text" name="artist" value={formData.artist} onChange={handleChange} placeholder="Artist"/>
-                <input type="text" name="image" value={formData.image} onChange={handleChange} placeholder="Image"/>
-                <input type="number" name="yearReleased" value={formData.yearReleased} onChange={handleChange} placeholder="Year Released"/>
-                <input type="text" name="linkToAlbum" value={formData.linkToAlbum} onChange={handleChange} placeholder="Link To Album"/>
-                <input type="submit" value="Create Album"/>
+                <input className="albums" type="text" name="albumName" value={formData.albumName} onChange={handleChange} placeholder="Album Name"/>
+                <input className="artist" type="text" name="artist" value={formData.artist} onChange={handleChange} placeholder="Artist"/>
+                <input className="image" type="text" name="image" value={formData.image} onChange={handleChange} placeholder="Image"/>
+                <input className="number" type="number" name="yearReleased" value={formData.yearReleased} onChange={handleChange} placeholder="Year Released"/>
+                <input className="link" type="text" name="linkToAlbum" value={formData.linkToAlbum} onChange={handleChange} placeholder="Link To Album"/>
+                <input className="create" type="submit" value="Create Album"/>
             </Form>
 
             {albums.map((albums, Index) => {
