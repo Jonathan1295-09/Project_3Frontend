@@ -59,6 +59,7 @@ function Index(props) {
                     <div className="allAlbums">
                         <div key={albums._id} className="albums">
                             <Link to={`/${albums._id}`}>
+                                <h1> {albums.artist}</h1>
                                 <h1>{albums.albumName}</h1>
                                 <img src={albums.image}/>
                             </Link>
