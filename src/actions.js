@@ -94,7 +94,7 @@ export const signupAction = async ({ request }) => {
     // check if status if 400 or more
 	if (response.status >= 400) {
         // alert the details of the error
-		alert(response.statusText);
+		alert("That username is already taken! Please choose a different name!");
         // redirect back to the frontend signup
 		return redirect('/signup');
 	}
@@ -120,7 +120,7 @@ export const loginAction = async ({ request }) => {
 	});
     // check if status is 400 or more
 	if (response.status >= 400) {
-		alert(response.statusText);
+		alert("The username or password didn't match. Please try again.");
 		return redirect('/login');
 	}
     // store whether loggedIn in localStorage

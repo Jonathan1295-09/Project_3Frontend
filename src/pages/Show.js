@@ -14,13 +14,14 @@ function Show(props) {
             </div>
 
             <div className="albumControls">
-                <h2>Update {album.name}</h2>
+                <h2>Update: {album.albumName}</h2>
                 <Form action={`/update/${album._id}`} method="post" className="updateForm">
                     <input type="text" name="albumName" placeholder="Album Name" defaultValue={album.albumName}/>
                     <input type="text" name="artist" placeholder="Artist" defaultValue={album.artist} />
                     <input type="text" name="image" placeholder="Image" defaultValue={album.image}  />
                     <input type="number" name="yearReleased" placeholder="Year Released" defaultValue={album.yearReleased}  />
                     <input type="text" name="linkToAlbum" placeholder="Link To Album" defaultValue={album.linkToAlbum}  />
+                    <br></br>
                     <input type="submit" value="Update Album"/>
                 </Form>
             </div>
