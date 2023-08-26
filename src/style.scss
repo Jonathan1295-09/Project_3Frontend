@@ -18,9 +18,6 @@
 
 .nav a {
     text-decoration: none;
-}
-
-.nav a {
     background:
     linear-gradient(
       to right,
@@ -123,9 +120,6 @@ input {
     background: linear-gradient(0deg, #6190DD, #6190DD) no-repeat right bottom / 0 var(--bg-h);
         transition: background-size 350ms;
     --bg-h: 100%;
-    // text-decoration: none;
-    // padding: 20px;
-    // font-size: .5em;
 }
 .albums a:where(:hover, :focus-visible) {
     background-size: 100% var(--bg-h);
@@ -135,30 +129,17 @@ input {
 .albums a {
     padding-bottom: 2px;
     --bg-h: 2px;
-}
-
-.albums a {
     text-decoration: none;
     color: beige;
     line-height: 1;
     font-size: .5em;
   }
 
-// .albums a:hover {
-//     text-decoration: underline;
-// }
-
 .logout {
     display: flex;
     justify-content: flex-end;
     margin-right: 10px;
     margin-bottom: 20px;
-}
-
-.index {
-    text-align: center;
-    font-size: 80px;
-    text-shadow: #FC0 10px 0 2px;
 }
 
 // SHOW PAGE
