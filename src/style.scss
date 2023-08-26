@@ -106,39 +106,6 @@ input {
     text-decoration: underline;
 }
 
-
-.index{
-    text-align: center;
-    font-size: 80px;
-    text-shadow: #FC0 10px 0 2px;
-}
-
-// .artist{
-//     text-align: center;
-//     font-size: 20px;
-// }
-
-// .image{
-//     text-align: center;
-//     font-size: 20px;
-// }
-
-// .number{
-//     text-align: center;
-//     font-size: 20px;
-// }
-
-// .link{
-//     text-align: center;
-//     font-size: 20px;
-// }
-
-// .create{
-//     font-size: 20px;
-// }
-
-
-
 // SHOW PAGE
 .album {
     display: flex;
@@ -179,9 +146,7 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
-    // flex-direction: column;
     margin: auto;
-    // padding: 10px;
     border: 1px solid beige;
 }
 
@@ -244,14 +209,10 @@ input {
     font-size: 20px;
 }
 
-
-
-
 // main css //
 .main{
     text-align: center;
     display: block;
-   
 }
 
 .welcome{
@@ -261,7 +222,6 @@ input {
 }
 
 .box{ 
-
    border: 5px solid ;
    margin: auto;
    width: fit-content;
@@ -274,7 +234,6 @@ input {
    padding-left: 5px;
    padding-right: 5px;
    color: black;
-//    text-shadow:  2px 0 2px#7F5A83;
    font-size: 25px
 }
 
