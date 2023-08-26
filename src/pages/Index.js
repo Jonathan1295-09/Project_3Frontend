@@ -33,6 +33,7 @@ function Index(props) {
     
 
     return (
+        <>
         <div className="albumContainer">
             <div className="logout">
                 <button onClick={async () => {
@@ -54,6 +55,10 @@ function Index(props) {
                         <input type="submit" value="Create Album"/>
                     </Form>
             </div>
+
+        </div>
+            
+            <div className="trial">
             {albums.map((albums, Index) => {
                 return (
                     <div className="allAlbums">
@@ -63,12 +68,16 @@ function Index(props) {
                                 <h1>{albums.albumName}</h1>
                                 <img src={albums.image}/>
                             </Link>
+                            
                         </div>
                     </div>    
-                );   
+                );  
+
             })}
-    </div>
+            </div>
+        </>
     );
+
 }
 
 export default Index;
